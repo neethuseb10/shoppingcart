@@ -1,0 +1,52 @@
+.checkout-container {
+  max-width: 500px;
+  margin: auto;
+  padding: 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.checkout-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.checkout-form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: #111;
+  color: white;
+}
+
+.checkout-form input:focus,
+.checkout-form textarea:focus,
+.checkout-form select:focus {
+  outline: none;
+  border-color: #ccc;
+}
+
+.place-order-btn {
+  width: 100%;
+  padding: 10px;
+  background: white;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.place-order-btn:hover {
+  background: #ccc;
+}

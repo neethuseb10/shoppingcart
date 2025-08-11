@@ -1,0 +1,19 @@
+.product-detail-container {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.detail-image {
+  max-width: 300px;
+  object-fit: contain;
+}
+
+.detail-content {
+  max-width: 600px;
+}
+
+.detail-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
