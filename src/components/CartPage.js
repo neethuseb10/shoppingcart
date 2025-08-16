@@ -1,6 +1,7 @@
 import React from 'react';
 import './CartPage.css';
 import { Link } from 'react-router-dom';
+
 const CartPage = ({ cartItems, onRemove, onUpdateQuantity }) => {
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.price * item.quantity,
@@ -38,19 +39,25 @@ const CartPage = ({ cartItems, onRemove, onUpdateQuantity }) => {
                   </span>
                 </div>
                 <div className="item-price">
-                  ₹{Math.round(item.price * 80 * item.quantity)}
+                  ₹{item.price * item.quantity}
                 </div>
-                <button onClick={() => onRemove(item.id)} className="remove-icon" title="Remove item">
-  🗑
-</button>
-           <Link to="/checkout">
-  <button>Go to Checkout</button>
-</Link>
-
+                <button
+                  onClick={() => onRemove(item.id)}
+                  className="remove-icon"
+                  title="Remove item"
+                >
+                  🗑
+                </button>
               </div>
             ))}
           </div>
-          <div className="cart-summary">Total: ₹{Math.round(totalPrice * 80)}</div>
+
+          <div className="cart-summary">
+            <p>Total: ₹{totalPrice}</p>
+            <Link to="/checkout">
+              <button className="checkout-btn">Go to Checkout</button>
+            </Link>
+          </div>
         </>
       )}
     </div>
